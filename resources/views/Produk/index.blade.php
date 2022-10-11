@@ -18,7 +18,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <a href="" id="" class="btn btn-primary table-sm" href="{{ route('produk.create') }}">
+                    <a class="btn btn-primary table-sm" href="{{ route('produk.create') }}">
                         Tambah Data
                     </a>
                     <hr>
@@ -61,4 +61,6 @@
             </div>
         </div>
     </div>
+
+    @include('Produk.create')
 @endsection
