@@ -1,30 +1,39 @@
 @extends('layout.template')
 
 @section('title', 'Data Supir - Rental')
-@section('title-page', 'Page Data Supir')
-
-@section('breadcrumb')
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
-            <li class="breadcrumb-item active">Supir</li>
-        </ol>
-    </nav>
-@endsection
 
 @section('content')
     <!--Today Tab Start-->
     <div class="row mt-5">
         <div class="col-12">
             <div class="card">
+                <div class="card-header  white d-flex justify-content-between ">
+                    <h6>Data Supir/Driver</h6>
+                    <div class="dropdown">
+                        <a class="" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-more_vert p-0"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">View
+                                Profile </a>
+                            <a class="dropdown-item" href="#">Account
+                                Settings </a>
+                            <a class="dropdown-item" href="#">
+                                Earning Reports </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="card-body">
-                    <a class="btn btn-primary table-sm" href="{{ route('produk.create') }}">
+                    <a class="btn btn-primary table-sm" href="{{ route('supir.create') }}">
                         Tambah Data
                     </a>
                     <hr>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped" id="dataTable">
-                            <thead class="thead-dark">
+                            <thead class="thead-light">
                                 <tr>
                                     <th>No</th>
                                     <th>Kode Supir</th>

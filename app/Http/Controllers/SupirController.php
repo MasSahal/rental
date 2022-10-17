@@ -25,7 +25,7 @@ class SupirController extends Controller
      */
     public function create()
     {
-        //
+        return view("Supir.create");
     }
 
     /**
@@ -36,7 +36,17 @@ class SupirController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "kd_supir" => "required",
+            "nm_supir" => "required",
+            "nohp" => "required",
+            "gender" => "required",
+            "alamat" => "required",
+            "ket" => "required",
+        ]);
+
+        Supir::create($request->all());
+        return redirect()->route("supir.index")->with("success", "Produk berhasil ditambahkan!");
     }
 
     /**
