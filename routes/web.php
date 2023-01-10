@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\SupirController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::get('/', function () {
 // Produk
 Route::resource('produk', ProdukController::class);
 Route::resource('supir', SupirController::class);
+Route::resource('peminjaman', PeminjamanController::class);

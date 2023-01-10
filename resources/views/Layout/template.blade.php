@@ -161,6 +161,7 @@
             $(".table").DataTable();
         })
     </script>
+    @yield('js')
 </body>
 
 </html>
